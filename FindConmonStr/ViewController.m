@@ -45,10 +45,13 @@
         //        判断下一步操作
         if (range.location<length1-range.length) {//不需要减length
             range.location++;
+            
         }else{
             range.length--;
             range.location=0;
         }
+        NSLog(@"%@",[str1 substringWithRange:range]);
+        NSLog(@"location:%lu,length:%lu",(unsigned long)range.location,(unsigned long)range.length);;
     }
     //    最后判断并返回子串
     if (range.length==0) {
